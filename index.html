@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Waves - Luxury Hotel Cartagena</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     
-    <!-- ========== LOADING ANIMATION ========== -->
     <div id="loading-screen" class="loading-screen">
         <div class="logo-container">
-            <!-- Logo PNG con animación de reveal -->
             <img class="logo-img" src="assets/img/Logosinfondo.png" alt="Golden Waves Logo">
             <h1 class="logo-text">GOLDEN WAVES</h1>
             <p class="logo-tagline">Donde el lujo fluye con la calma del mar</p>
@@ -32,7 +27,6 @@
         </div>
     </div>
 
-    <!-- ========== NAVIGATION ========== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
@@ -49,7 +43,7 @@
                     <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
                 </ul>
-                <a href="#reservar" class="btn-reserve">Reservar Ahora</a>
+                <a href="reservar.html" class="btn-reserve">Reservar Ahora</a>
             </div>
             
             <div class="nav-toggle" id="nav-toggle">
@@ -60,12 +54,10 @@
         </div>
     </nav>
 
-    <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-background">
-            <!-- Background image will be set via CSS -->
-        </div>
+            </div>
         
         <div class="hero-content">
             <div class="hero-text">
@@ -79,20 +71,11 @@
                 </p>
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
                     <a href="#about-preview" class="btn btn-primary">Descubre Más</a>
-                    <a href="#reservar" class="btn btn-secondary">Reservar Ahora</a>
-                </div>
-            </div>
-            <!--
-            <div class="hero-scroll">
-                <div class="scroll-indicator">
-                    <span>Scroll</span>
-                    <div class="scroll-line"></div>
+                    <a href="reservar.html" class="btn btn-secondary">Reservar Ahora</a>
                 </div>
             </div>
         </div>
-    -->
 
-        <!-- Floating elements for parallax -->
         <div class="floating-elements">
             <div class="float-element float-1"></div>
             <div class="float-element float-2"></div>
@@ -100,7 +83,6 @@
         </div>
     </section>
 
-    <!-- ========== ABOUT PREVIEW ========== -->
     <section class="about-preview section" id="about-preview">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -159,7 +141,6 @@
         </div>
     </section>
 
-    <!-- ========== ROOMS HIGHLIGHT ========== -->
     <section class="rooms-highlight section section-dark" id="rooms">
         <div class="container-full">
             <div class="section-header" data-aos="fade-up">
@@ -241,7 +222,6 @@
         </div>
     </section>
 
-    <!-- ========== EXPERIENCES ========== -->
     <section class="experiences section section-dark" id="experiencias">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -293,7 +273,6 @@
         </div>
     </section>
 
-    <!-- ========== GALLERY SECTION ========== -->
     <section class="gallery-section section" id="galeria">
         <div class="section-header container" data-aos="fade-up">
             <span class="section-subtitle">Nuestros Espacios</span>
@@ -301,17 +280,15 @@
             <p class="section-description">Descubre cada rincón de Golden Waves, donde el lujo y la naturaleza se fusionan en perfecta armonía.</p>
         </div>
 
-        <!-- Carrusel infinito -->
         <div class="carousel-wrapper">
             <div class="carousel-track" id="carousel-track">
-                <!-- Las fotos se duplican para el loop infinito -->
                 <div class="carousel-item" onclick="openLightbox('assets/img/Golden_pool.png','Golden Pool — Piscina Infinity')">
                     <img src="assets/img/Golden_pool.png" alt="Golden Pool">
                     <div class="carousel-caption">Golden Pool</div>
                 </div>
-                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar &amp; Mar')">
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar & Mar')">
                     <img src="assets/img/Suit_manglarymar.png" alt="Suite Manglar y Mar">
-                    <div class="carousel-caption">Suite Manglar &amp; Mar</div>
+                    <div class="carousel-caption">Suite Manglar & Mar</div>
                 </div>
                 <div class="carousel-item" onclick="openLightbox('assets/img/Salon_eventos.png','Salón de Eventos')">
                     <img src="assets/img/Salon_eventos.png" alt="Salón de Eventos">
@@ -337,14 +314,13 @@
                     <img src="assets/img/hotel principal.png" alt="Hotel Golden Waves">
                     <div class="carousel-caption">Hotel Golden Waves</div>
                 </div>
-                <!-- Duplicado para loop infinito -->
                 <div class="carousel-item" onclick="openLightbox('assets/img/Golden_pool.png','Golden Pool — Piscina Infinity')">
                     <img src="assets/img/Golden_pool.png" alt="Golden Pool">
                     <div class="carousel-caption">Golden Pool</div>
                 </div>
-                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar &amp; Mar')">
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar & Mar')">
                     <img src="assets/img/Suit_manglarymar.png" alt="Suite Manglar y Mar">
-                    <div class="carousel-caption">Suite Manglar &amp; Mar</div>
+                    <div class="carousel-caption">Suite Manglar & Mar</div>
                 </div>
                 <div class="carousel-item" onclick="openLightbox('assets/img/Salon_eventos.png','Salón de Eventos')">
                     <img src="assets/img/Salon_eventos.png" alt="Salón de Eventos">
@@ -378,7 +354,6 @@
         </div>
     </section>
 
-    <!-- Lightbox -->
     <div id="gallery-lightbox" class="gallery-lightbox" onclick="closeLightbox(event)">
         <div class="lightbox-inner">
             <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
@@ -386,8 +361,6 @@
             <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
     </div>
-
-    <!-- ========== STATS SECTION ========== -->
 
     <section class="stats section-dark">
         <div class="container">
@@ -415,7 +388,6 @@
         </div>
     </section>
 
-    <!-- ========== LOCATION ========== -->
     <section class="location section" id="ubicacion">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -471,7 +443,6 @@
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -531,7 +502,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Golden Waves Hotel. Todos los derechos reservados.</p>
+                <p>© 2026 Golden Waves Hotel. Todos los derechos reservados.</p>
                 <div class="footer-legal">
                     <a href="#">Política de Privacidad</a>
                     <a href="#">Términos y Condiciones</a>
@@ -540,13 +511,11 @@
         </div>
     </footer>
 
-    <!-- ========== SCRIPTS ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
 
-    <!-- Gallery Lightbox Script -->
     <script>
         function openLightbox(src, caption) {
             const lb = document.getElementById('gallery-lightbox');

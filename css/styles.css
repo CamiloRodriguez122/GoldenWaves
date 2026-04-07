@@ -1,172 +1,312 @@
-/*CSS DE ROOMS.HTML*/
+/* ==========================================================================
+   CSS UNIFICADO: SERVICES.HTML (ROOMS & PACKAGES)
+   ========================================================================== */
 
 :root {
-  --nude: #f4f1ea;
-  --deep-blue: #0F2438;
-  --gold: #cebb82;
-  --white: #FFFFFF;
+    --deep-blue: #0F2438;   /* Azul oficial */
+    --gold-bright: #d4af37; /* Dorado oficial (Navbar) */
+    --nude-bg: #f4f1ea;     /* Fondo claro de tarjetas */
+    --white: #FFFFFF;
+    --text-light: #b8c5d6;  /* Texto sobre fondo oscuro */
+    --text-dark: #1a1a1a;   /* Texto sobre fondo claro */
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* 1. Ajustes Globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  font-family: 'Jost', sans-serif;
-  background-color: var(--deep-blue);
-  color: var(--white);
-  line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--deep-blue);
+    color: var(--white);
+    line-height: 1.6;
+    padding-top: 100px; /* Evita que la navbar tape el contenido */
 }
 
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-.rooms-section { padding: 80px 0; }
-
-.rooms-header { text-align: center; margin-bottom: 60px; }
-.rooms-title { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300; }
-.rooms-title em { font-style: italic; color: var(--gold); }
-.header-line { width: 50px; height: 1px; background: var(--gold); margin: 25px auto; }
-
-.rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.container { 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
-.room-card {
-  background: var(--nude);
-  border-radius: 25px;
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--deep-blue);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* 2. Encabezado de la Sección */
+.rooms-section { 
+    padding: 60px 0 100px; 
 }
 
-.room-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
-
-.card-img-container { height: 260px; position: relative; overflow: hidden; }
-.room-img { width: 100%; height: 100%; background-size: cover; background-position: center; transition: 1.2s ease; }
-.room-card:hover .room-img { transform: scale(1.1); }
-
-.card-label { position: absolute; top: 15px; left: 15px; background: var(--deep-blue); color: var(--gold); padding: 6px 14px; border-radius: 20px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
-
-.card-info { padding: 30px 20px; text-align: center; }
-.card-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 8px; color: var(--deep-blue); }
-.card-price { font-size: 0.9rem; opacity: 0.8; }
-.card-price strong { color: var(--gold); font-size: 1.5rem; margin-left: 5px; }
-
-.card-packages { background: var(--gold); color: var(--deep-blue); border: none; }
-.card-packages .package-tag { color: var(--deep-blue); font-weight: 600; }
-.card-packages .btn-package { color: var(--deep-blue); border-color: var(--deep-blue); font-weight: 500; }
-
-.package-content { text-align: center; padding: 60px 30px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
-.package-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
-.package-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin: 15px 0; }
-.btn-package { border-bottom: 1.5px solid var(--deep-blue); padding-bottom: 4px; font-size: 0.95rem; align-self: center; }
-
-.details-overlay {
-    position: fixed; inset: 0; background: rgba(15, 36, 56, 0.98);
-    backdrop-filter: blur(15px); display: none; z-index: 1000;
-    align-items: center; justify-content: center; padding: 20px;
+.rooms-header { 
+    text-align: center; 
+    margin-bottom: 80px; 
 }
-.details-overlay.active { display: flex; }
-
-.details-content {
-    background: var(--nude); width: 100%; max-width: 950px;
-    border-radius: 40px; overflow: hidden; position: relative;
-    color: var(--deep-blue); box-shadow: 0 40px 100px rgba(0,0,0,0.6);
-}
-
-.back-arrow {
-    position: absolute; top: 30px; left: 35px;
-    background: none; border: none;
-    display: flex; align-items: center; gap: 10px;
-    cursor: pointer; color: var(--gold);
-    font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 2px; z-index: 10;
-    transition: 0.3s;
-}
-.back-arrow:hover { transform: translateX(-8px); opacity: 0.8; }
-
-.details-grid { display: grid; grid-template-columns: 1fr 1fr; }
-.details-img-side { height: 550px; background-size: cover; background-position: center; }
-.details-text-side { padding: 70px 50px 50px; position: relative; }
-
-.details-h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin-bottom: 15px; line-height: 1; color: var(--deep-blue); }
-.details-p { font-size: 1rem; opacity: 0.8; margin-bottom: 30px; }
-
-.details-amenities h4 { font-size: 0.75rem; text-transform: uppercase; color: var(--gold); margin-bottom: 15px; letter-spacing: 2.5px; font-weight: 600; }
-.details-amenities ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.details-amenities li { font-size: 0.9rem; opacity: 0.8; }
-.details-amenities li::before { content: "• "; color: var(--gold); font-weight: bold; }
-
-.details-footer { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 25px; }
-.modal-price strong { font-size: 1.8rem; color: var(--gold); }
-
-.btn-book { background: var(--deep-blue); color: var(--white); border: none; padding: 15px 35px; border-radius: 30px; cursor: pointer; transition: 0.4s; font-weight: 500; letter-spacing: 1px; }
-.btn-book:hover { background: var(--gold); color: var(--deep-blue); transform: translateY(-3px); }
-
-.close-details { position: absolute; top: 25px; right: 30px; background: none; border: none; font-size: 1.5rem; cursor: pointer; opacity: 0.3; transition: 0.3s; }
-.close-details:hover { opacity: 1; transform: rotate(90deg); }
-
-@media (max-width: 850px) {
-    .details-grid { grid-template-columns: 1fr; }
-    .details-img-side { height: 240px; }
-    .details-text-side { padding: 50px 30px 40px; }
-    .details-h2 { font-size: 2.5rem; }
-    .back-arrow span { display: none; }
-    .rooms-title { font-size: 3.2rem; }
-}
-
-.reveal { opacity: 0; transform: translateY(30px); transition: 1.2s ease-out; }
-.reveal.in-view { opacity: 1; transform: translateY(0); }
-
-/*FIN CSS DE ROOMS.HTML*/
-
-/*INICIO CSS DE PAQUETES.HTML*/
 
 .eyebrow { 
-  font-size: 0.75rem; 
-  text-transform: uppercase; 
-  letter-spacing: 4px; 
-  color: var(--gold); 
-  display: block; 
-  margin-bottom: 15px; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    color: var(--gold-bright); 
+    display: block; 
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.rooms-title { 
+    font-family: 'Cinzel', serif; 
+    font-size: clamp(2.5rem, 6vw, 4.5rem); 
+    color: var(--white); 
+    letter-spacing: 8px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.rooms-title em { 
+    font-style: italic; 
+    color: var(--gold-bright); 
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.header-line { 
+    width: 80px; 
+    height: 2px; 
+    background: var(--gold-bright); 
+    margin: 30px auto; 
 }
 
 .header-desc { 
-  font-size: 1rem; 
-  opacity: 0.8; 
-  max-width: 600px; 
-  margin: 0 auto; 
+    color: var(--text-light); 
+    font-size: 1.1rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    font-weight: 300;
 }
 
-.card-info { padding: 30px 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+/* 3. Grid de Habitaciones */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.room-card {
+    background: var(--nude-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
+
+.card-img-container { 
+    height: 280px; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.room-img { 
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    transition: transform 1.2s ease;
+}
+
+.room-card:hover .room-img {
+    transform: scale(1.1);
+}
+
+.card-label { 
+    position: absolute; 
+    top: 15px; 
+    left: 15px; 
+    background: var(--deep-blue); 
+    color: var(--gold-bright); 
+    padding: 8px 15px; 
+    font-size: 0.7rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.card-info { 
+    padding: 35px 25px; 
+    text-align: center; 
+    color: var(--deep-blue); 
+    flex-grow: 1;
+}
 
 .card-name { 
-  font-family: 'Cormorant Garamond', serif; 
-  font-size: 1.8rem; 
-  margin-bottom: 5px; 
-  color: var(--deep-blue); 
-  line-height: 1.1;
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 2.2rem; 
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
 
-.card-details {
-  font-size: 0.85rem;
-  opacity: 0.7;
-  margin-bottom: 15px;
-  line-height: 1.3;
+.card-price {
+    font-size: 0.95rem;
+    color: #444;
 }
 
+.card-price strong { 
+    color: var(--gold-bright); 
+    font-size: 1.8rem; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 4. Tarjeta Especial de Paquetes */
 .card-packages { 
-  background: var(--gold); 
-  color: var(--deep-blue); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  min-height: 400px;
+    background: linear-gradient(135deg, var(--gold-bright) 0%, #b39b5d 100%); 
+    color: var(--deep-blue) !important;
+    justify-content: center;
+    align-items: center;
+    border: none;
 }
 
-.package-content { text-align: center; padding: 40px; }
+.package-content {
+    padding: 50px 30px;
+    text-align: center;
+}
 
-/*FIN CSS DE PAQUETES.HTML*/
+.package-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.package-title { 
+    font-family: 'Cinzel', serif; 
+    font-size: 2.5rem; 
+    margin: 20px 0; 
+    line-height: 1.1;
+}
+
+.btn-package { 
+    display: inline-block;
+    border: 2px solid var(--deep-blue);
+    padding: 12px 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* 5. Modal de Detalles (Overlay) */
+.details-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 26, 0.98);
+    backdrop-filter: blur(10px);
+    display: none;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.details-overlay.active { display: flex; }
+
+.details-content {
+    background: var(--nude-bg);
+    width: 100%;
+    max-width: 1050px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    color: var(--deep-blue);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+}
+
+.details-grid { display: grid; grid-template-columns: 1.2fr 1fr; }
+
+.details-img-side { 
+    height: 600px; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.details-text-side { 
+    padding: 60px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-h2 { 
+    font-family: 'Cinzel', serif; 
+    font-size: 2.8rem; 
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.details-amenities ul { 
+    list-style: none; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.details-amenities li { font-size: 0.9rem; }
+.details-amenities li::before { content: "✦ "; color: var(--gold-bright); font-weight: bold; }
+
+.details-footer { 
+    margin-top: 30px; 
+    padding-top: 25px; 
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-price strong { font-size: 1.8rem; color: var(--gold-bright); }
+
+.btn-book {
+    background: var(--deep-blue);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background: var(--gold-bright);
+    color: var(--deep-blue);
+}
+
+/* 6. Animaciones de entrada */
+.reveal { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+.reveal.in-view { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* 7. Responsivo */
+@media (max-width: 992px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .details-img-side { height: 250px; }
+    .details-text-side { padding: 40px; }
+}
+
+@media (max-width: 600px) {
+    .rooms-title { font-size: 2.8rem; }
+    .details-footer { flex-direction: column; gap: 20px; }
+}

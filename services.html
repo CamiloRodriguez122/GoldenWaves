@@ -1,93 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios — GOLDEN WAVES</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias & Suites — GOLDEN WAVES</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Ajuste para el divisor creativo entre secciones */
+        .section-divider {
+            height: 120px;
+            background: linear-gradient(to bottom, var(--deep-blue), #0a1520);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .section-divider::after {
+            content: "";
+            width: 1px;
+            height: 80px;
+            background: var(--gold-bright);
+            opacity: 0.4;
+        }
+        .bg-darker { background-color: #0a1520; }
+    </style>
 </head>
 <body>
 
-<section class="rooms-section">
-  <div class="container">
-    <header class="rooms-header reveal">
-      <span class="eyebrow">The Gold Standard</span>
-      <h2 class="rooms-title">GOLDEN <em>WAVES</em></h2>
-      <p class="header-desc">Espacios curados donde la sofisticación se encuentra con el confort absoluto.</p>
-      <div class="header-line"></div>
-    </header>
-
-    <div class="rooms-grid">
-      <article class="room-card reveal" onclick="openDetails(0)">
-        <div class="card-img-container">
-          <div class="room-img" style="background-image: url('assets/img/Suit_manglarymar.png');"></div>
-          <span class="card-label">Premium</span>
-        </div>
-        <div class="card-info">
-          <h3 class="card-name">Suite Mar y Manglar</h3>
-          <div class="card-price">Desde <strong>$1,200,000</strong><span>/noche</span></div>
-        </div>
-      </article>
-
-      <article class="room-card reveal" onclick="openDetails(1)">
-        <div class="card-img-container">
-          <div class="room-img" style="background-image: url('assets/img/Suit_mar.png');"></div>
-          <span class="card-label">Ocean View</span>
-        </div>
-        <div class="card-info">
-          <h3 class="card-name">Suite Vista al Mar</h3>
-          <div class="card-price">Desde <strong>$1,500,000</strong><span>/noche</span></div>
-        </div>
-      </article>
-
-      <article class="room-card reveal" onclick="openDetails(2)">
-        <div class="card-img-container">
-          <div class="room-img" style="background-image: url('assets/img/Suit_normal.png');"></div>
-          <span class="card-label">Essential</span>
-        </div>
-        <div class="card-info">
-          <h3 class="card-name">Suite Básica</h3>
-          <div class="card-price">Desde <strong>$950,000</strong><span>/noche</span></div>
-        </div>
-      </article>
-
-      <a href="paquetes.html" class="room-card card-packages reveal">
-        <div class="package-content">
-          <span class="package-tag">Ofertas Especiales</span>
-          <h3 class="package-title">Planes & Tours</h3>
-          <span class="btn-package">Ver Paquetes →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<div id="details-overlay" class="details-overlay">
-    <div class="details-content">
-        <button class="back-arrow" onclick="closeDetails()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cebb82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            <span>Volver</span>
-        </button>
-        <button class="close-details" onclick="closeDetails()">✕</button>
-        <div class="details-grid">
-            <div id="details-img" class="details-img-side"></div>
-            <div class="details-text-side">
-                <h2 id="details-title" class="details-h2"></h2>
-                <p id="details-desc" class="details-p"></p>
-                <div class="details-amenities">
-                    <h4>Servicios & Comodidades</h4>
-                    <ul id="details-list"></ul>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-mini">
+                    <img src="assets/img/Logosinfondo.png" alt="Golden Waves Logo" class="logo-mini-img">
                 </div>
-                <div class="details-footer">
-                    <span id="details-price" class="modal-price"></span>
-                    <button class="btn-book">Reservar Ahora</button>
+                <span class="logo-text-nav">GOLDEN WAVES</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
+                </ul>
+                <a href="reservar.html" class="btn-reserve">Reservar Ahora</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="rooms-section">
+        <div class="container">
+            <header class="rooms-header reveal">
+                <span class="eyebrow">The Gold Standard</span>
+                <h2 class="rooms-title">SUITES <em>EXCLUSIVAS</em></h2>
+                <p class="header-desc">Refugios privados diseñados para el descanso absoluto frente al Mar Caribe.</p>
+                <div class="header-line"></div>
+            </header>
+
+            <div class="rooms-grid">
+                <article class="room-card reveal" onclick="openDetails(0)">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Suit_manglarymar.png');"></div>
+                        <span class="card-label">Premium</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Suite Mar y Manglar</h3>
+                        <div class="card-price">Desde <strong>$1,200,000</strong><span>/noche</span></div>
+                    </div>
+                </article>
+
+                <article class="room-card reveal" onclick="openDetails(1)">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Suit_mar.png');"></div>
+                        <span class="card-label">Ocean View</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Suite Vista al Mar</h3>
+                        <div class="card-price">Desde <strong>$1,500,000</strong><span>/noche</span></div>
+                    </div>
+                </article>
+
+                <article class="room-card reveal" onclick="openDetails(2)">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Suit_normal.png');"></div>
+                        <span class="card-label">Essential</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Suite Básica</h3>
+                        <div class="card-price">Desde <strong>$950,000</strong><span>/noche</span></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="rooms-section bg-darker" style="padding-top: 50px;">
+        <div class="container">
+            <header class="rooms-header reveal">
+                <span class="eyebrow">Curated Experiences</span>
+                <h2 class="rooms-title">PLANES & <em>TOURS</em></h2>
+                <p class="header-desc">Aventuras y momentos diseñados para elevar su estancia a otro nivel.</p>
+                <div class="header-line"></div>
+            </header>
+
+            <div class="rooms-grid">
+                <article class="room-card reveal" onclick="window.location.href='reservar.html'">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Salon_eventos.png');"></div>
+                        <span class="card-label">Corporativo</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Centro de Eventos</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Bodas y corporativos con catering y decoración de lujo.</p>
+                        <div class="card-price">Desde <strong>$15,000,000</strong></div>
+                    </div>
+                </article>
+
+                <article class="room-card reveal" onclick="window.location.href='reservar.html'">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Salon_Cocina.png');"></div>
+                        <span class="card-label">Gourmet</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Experiencia Gastronómica</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Chef en vivo, maridaje exclusivo y pesca recreativa.</p>
+                        <div class="card-price">Desde <strong>$200,000</strong></div>
+                    </div>
+                </article>
+
+                <article class="room-card reveal" onclick="window.location.href='reservar.html'">
+                    <div class="card-img-container">
+                        <div class="room-img" style="background-image: url('assets/img/Golden_pool.png');"></div>
+                        <span class="card-label">Day Pass</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">Golden Pool</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Acceso total a piscinas infinity y playa privada.</p>
+                        <div class="card-price">Desde <strong>$300,000</strong></div>
+                    </div>
+                </article>
+
+                <a href="index.html" class="room-card card-packages reveal">
+                    <div class="package-content">
+                        <span class="package-tag">Explorar más</span>
+                        <h3 class="package-title">Inicio</h3>
+                        <span class="btn-package">Volver atrás →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="details-overlay" class="details-overlay">
+        <div class="details-content">
+            <button class="back-arrow" onclick="closeDetails()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cebb82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span>Volver</span>
+            </button>
+            <button class="close-details" onclick="closeDetails()">✕</button>
+            <div class="details-grid">
+                <div id="details-img" class="details-img-side"></div>
+                <div class="details-text-side">
+                    <h2 id="details-title" class="details-h2"></h2>
+                    <p id="details-desc" class="details-p"></p>
+                    <div class="details-amenities">
+                        <h4>Servicios & Comodidades</h4>
+                        <ul id="details-list"></ul>
+                    </div>
+                    <div class="details-footer">
+                        <span id="details-price" class="modal-price"></span>
+                        <a href="reservar.html" class="btn btn-primary" style="text-decoration: none; display: inline-block; text-align: center; background: var(--deep-blue); color: white; padding: 12px 25px; border-radius: 5px; font-weight: 600;">Reservar Ahora</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="js/services.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+    <script>
+        // Animaciones de scroll (Reveal)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
