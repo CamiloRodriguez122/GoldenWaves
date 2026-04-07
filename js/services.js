@@ -1,6 +1,6 @@
 // ========================================
-// GOLDEN WAVES - MAINS.JS
-// JS exclusivo de rooms.html y paquetes.html
+// GOLDEN WAVES - SERVICES.JS
+// JS exclusivo de services.html y paquetes.html
 // ========================================
 
 // ========== REVEAL ANIMATION (ROOMS) ==========
@@ -31,21 +31,21 @@ const roomsData = [
     {
         title: "Suite Mar y Manglar",
         desc: "Nuestra estancia más exclusiva con vistas duales al ecosistema local y acabados en madera noble.",
-        price: "$2.100",
+        price: "$1,200,000 / noche",
         img: "assets/img/Suit_manglarymar.png",
         amenities: ["Terraza Privada", "Cama King Size", "Jacuzzi", "Mini Bar Premium", "Wifi 6G", "Aire Central"]
     },
     {
         title: "Suite Vista al Mar",
         desc: "Elegancia frente al horizonte caribeño diseñada para despertares bañados en luz natural.",
-        price: "$1.750",
+        price: "$1,500,000 / noche",
         img: "assets/img/Suit_mar.png",
         amenities: ["Balcón al Mar", "Cama King Size", "Smart TV 65'", "Cafetera Nespresso", "Caja Fuerte", "Ducha Lluvia"]
     },
     {
         title: "Suite Básica",
         desc: "Minimalismo cálido y confort absoluto diseñado para la desconexión total del mundo exterior.",
-        price: "$950",
+        price: "$950,000 / noche",
         img: "assets/img/Suit_normal.png",
         amenities: ["Cama Queen Size", "Smart TV 55'", "Escritorio", "Wifi Alta Velocidad", "Aire Acondicionado", "Ducha Moderna"]
     }

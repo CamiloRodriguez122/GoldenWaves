@@ -1,0 +1,202 @@
+/* ========================================
+   GOLDEN WAVES - CONTACT.CSS
+   Estilos exclusivos de contact.html
+   ======================================== */
+
+/* ========== HERO CONTACT ========== */
+.contact-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/img/hotel principal.png') center/cover no-repeat;
+    background-attachment: fixed;
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+    filter: brightness(0.6);
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg,
+        rgba(10, 15, 26, 0.85) 0%,
+        rgba(26, 35, 50, 0.7) 50%,
+        rgba(10, 15, 26, 0.9) 100%
+    );
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0 2rem;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.contact-hero-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.contact-hero-title em {
+    font-style: italic;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-wrapper {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-dark);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.contact-info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.contact-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-detail-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.contact-detail-text h4 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-detail-text p {
+    color: var(--color-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-form-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-xl);
+}
+
+.contact-form-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contact-form-subtitle {
+    color: var(--color-gray);
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(15, 36, 56, 0.2);
+    border-radius: var(--radius-sm);
+    background: #fdfcfb;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: #fff;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-card {
+        padding: 2.5rem;
+    }
+}

@@ -22,14 +22,8 @@
     <!-- ========== LOADING ANIMATION ========== -->
     <div id="loading-screen" class="loading-screen">
         <div class="logo-container">
-            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Seahorse outline animation -->
-                <circle class="circle-outline" cx="100" cy="100" r="80" />
-                <path class="seahorse-path" d="M100,40 Q110,50 110,70 Q110,90 100,100 Q90,110 85,120 Q80,130 85,140 Q90,150 85,160" 
-                      stroke="#d4af37" stroke-width="2" fill="none" stroke-linecap="round"/>
-                <path class="wave-path" d="M70,100 Q80,95 90,100 Q100,105 110,100 Q120,95 130,100" 
-                      stroke="#d4af37" stroke-width="1.5" fill="none" opacity="0.6"/>
-            </svg>
+            <!-- Logo PNG con animación de reveal -->
+            <img class="logo-img" src="assets/img/Logosinfondo.png" alt="Golden Waves Logo">
             <h1 class="logo-text">GOLDEN WAVES</h1>
             <p class="logo-tagline">Donde el lujo fluye con la calma del mar</p>
             <div class="loading-bar">
@@ -43,11 +37,7 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <div class="logo-mini">
-                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="25" cy="25" r="20" stroke="#d4af37" stroke-width="1.5" fill="none"/>
-                        <path d="M25,15 Q27,18 27,23 Q27,28 25,30 Q23,32 22,35" 
-                              stroke="#d4af37" stroke-width="1.5" fill="none"/>
-                    </svg>
+                    <img src="assets/img/Logosinfondo.png" alt="Golden Waves Logo" class="logo-mini-img">
                 </div>
                 <span class="logo-text-nav">GOLDEN WAVES</span>
             </a>
@@ -56,7 +46,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="rooms.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
                 </ul>
                 <a href="#reservar" class="btn-reserve">Reservar Ahora</a>
@@ -81,14 +71,14 @@
             <div class="hero-text">
                 <span class="hero-subtitle" data-aos="fade-up">Bienvenido al Paraíso</span>
                 <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                    <span class="title-line">GOLDEN</span>
+                    <span class="title-line title-white">GOLDEN</span>
                     <span class="title-line title-accent">WAVES</span>
                 </h1>
                 <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
                     Donde el lujo fluye con la calma del mar en La Boquilla, Cartagena
                 </p>
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#experiencias" class="btn btn-primary">Descubre Más</a>
+                    <a href="#about-preview" class="btn btn-primary">Descubre Más</a>
                     <a href="#reservar" class="btn btn-secondary">Reservar Ahora</a>
                 </div>
             </div>
@@ -121,11 +111,6 @@
             <div class="about-grid">
                 <div class="about-image" data-aos="fade-right">
                     <img src="assets/img/hotel principal.png" alt="Golden Waves Hotel" loading="lazy">
-                    <div class="image-overlay">
-                        <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="about-content" data-aos="fade-left">
@@ -257,48 +242,153 @@
     </section>
 
     <!-- ========== EXPERIENCES ========== -->
-    <section class="experiences section" id="experiencias">
+    <section class="experiences section section-dark" id="experiencias">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-subtitle">Paquetes Exclusivos</span>
                 <h2 class="section-title">Experiencias Inolvidables</h2>
+                <p class="section-description">Vive momentos únicos diseñados para superar cada expectativa</p>
             </div>
             
             <div class="experiences-grid">
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="experience-icon">
-                        <i class="fas fa-heart"></i>
+                    <div class="experience-img">
+                        <img src="assets/img/Suit_manglarymar.png" alt="Romance" loading="lazy">
                     </div>
-                    <h3>Romance / Luna de Miel</h3>
-                    <p>Cena privada en playa, jacuzzi y decoración romántica</p>
-                    <span class="experience-price">Desde $2,500,000</span>
-                    <a href="services.html" class="btn-experience">Ver Más</a>
+                    <div class="experience-body">
+                        <div class="experience-icon"><i class="fas fa-heart"></i></div>
+                        <h3>Romance / Luna de Miel</h3>
+                        <p>Cena privada en playa, jacuzzi privado y decoración romántica personalizada incluida</p>
+                        <span class="experience-price">Desde $2,500,000</span>
+                        <a href="paquetes.html" class="btn-experience">Ver Más</a>
+                    </div>
                 </div>
                 
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experience-icon">
-                        <i class="fas fa-spa"></i>
+                    <div class="experience-img">
+                        <img src="assets/img/Golden_pool.png" alt="Wellness" loading="lazy">
                     </div>
-                    <h3>Wellness Retreat</h3>
-                    <p>Spa completo, yoga y alimentación healthy gourmet</p>
-                    <span class="experience-price">Desde $1,800,000</span>
-                    <a href="services.html" class="btn-experience">Ver Más</a>
+                    <div class="experience-body">
+                        <div class="experience-icon"><i class="fas fa-spa"></i></div>
+                        <h3>Wellness Retreat</h3>
+                        <p>Spa completo, yoga al amanecer, piscina infinity y alimentación gourmet saludable</p>
+                        <span class="experience-price">Desde $1,800,000</span>
+                        <a href="paquetes.html" class="btn-experience">Ver Más</a>
+                    </div>
                 </div>
                 
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="experience-icon">
-                        <i class="fas fa-leaf"></i>
+                    <div class="experience-img">
+                        <img src="assets/img/Aventura_dorada.png" alt="Aventura" loading="lazy">
                     </div>
-                    <h3>Mangrove Luxury</h3>
-                    <p>Villa privada con tour ecológico exclusivo y mayordomo</p>
-                    <span class="experience-price">Desde $3,500,000</span>
-                    <a href="services.html" class="btn-experience">Ver Más</a>
+                    <div class="experience-body">
+                        <div class="experience-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Aventura Dorada</h3>
+                        <p>Kayak, buceo, bicicleta e isla Tierra Bomba con guía privado y mayordomo exclusivo</p>
+                        <span class="experience-price">Desde $2,200,000</span>
+                        <a href="paquetes.html" class="btn-experience">Ver Más</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ========== GALLERY SECTION ========== -->
+    <section class="gallery-section section" id="galeria">
+        <div class="section-header container" data-aos="fade-up">
+            <span class="section-subtitle">Nuestros Espacios</span>
+            <h2 class="section-title">Galería del Hotel</h2>
+            <p class="section-description">Descubre cada rincón de Golden Waves, donde el lujo y la naturaleza se fusionan en perfecta armonía.</p>
+        </div>
+
+        <!-- Carrusel infinito -->
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Las fotos se duplican para el loop infinito -->
+                <div class="carousel-item" onclick="openLightbox('assets/img/Golden_pool.png','Golden Pool — Piscina Infinity')">
+                    <img src="assets/img/Golden_pool.png" alt="Golden Pool">
+                    <div class="carousel-caption">Golden Pool</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar &amp; Mar')">
+                    <img src="assets/img/Suit_manglarymar.png" alt="Suite Manglar y Mar">
+                    <div class="carousel-caption">Suite Manglar &amp; Mar</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Salon_eventos.png','Salón de Eventos')">
+                    <img src="assets/img/Salon_eventos.png" alt="Salón de Eventos">
+                    <div class="carousel-caption">Salón de Eventos</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Casino.png','Casino Golden Waves')">
+                    <img src="assets/img/Casino.png" alt="Casino">
+                    <div class="carousel-caption">Casino</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Salon_Cocina.png','Restaurante Gourmet')">
+                    <img src="assets/img/Salon_Cocina.png" alt="Restaurante Gourmet">
+                    <div class="carousel-caption">Restaurante Gourmet</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Aventura_dorada.png','Aventura Dorada')">
+                    <img src="assets/img/Aventura_dorada.png" alt="Aventura Dorada">
+                    <div class="carousel-caption">Aventura Dorada</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_mar.png','Suite Vista al Mar')">
+                    <img src="assets/img/Suit_mar.png" alt="Suite Vista al Mar">
+                    <div class="carousel-caption">Suite Vista al Mar</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/hotel principal.png','Hotel Golden Waves')">
+                    <img src="assets/img/hotel principal.png" alt="Hotel Golden Waves">
+                    <div class="carousel-caption">Hotel Golden Waves</div>
+                </div>
+                <!-- Duplicado para loop infinito -->
+                <div class="carousel-item" onclick="openLightbox('assets/img/Golden_pool.png','Golden Pool — Piscina Infinity')">
+                    <img src="assets/img/Golden_pool.png" alt="Golden Pool">
+                    <div class="carousel-caption">Golden Pool</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_manglarymar.png','Suite Manglar &amp; Mar')">
+                    <img src="assets/img/Suit_manglarymar.png" alt="Suite Manglar y Mar">
+                    <div class="carousel-caption">Suite Manglar &amp; Mar</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Salon_eventos.png','Salón de Eventos')">
+                    <img src="assets/img/Salon_eventos.png" alt="Salón de Eventos">
+                    <div class="carousel-caption">Salón de Eventos</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Casino.png','Casino Golden Waves')">
+                    <img src="assets/img/Casino.png" alt="Casino">
+                    <div class="carousel-caption">Casino</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Salon_Cocina.png','Restaurante Gourmet')">
+                    <img src="assets/img/Salon_Cocina.png" alt="Restaurante Gourmet">
+                    <div class="carousel-caption">Restaurante Gourmet</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Aventura_dorada.png','Aventura Dorada')">
+                    <img src="assets/img/Aventura_dorada.png" alt="Aventura Dorada">
+                    <div class="carousel-caption">Aventura Dorada</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/Suit_mar.png','Suite Vista al Mar')">
+                    <img src="assets/img/Suit_mar.png" alt="Suite Vista al Mar">
+                    <div class="carousel-caption">Suite Vista al Mar</div>
+                </div>
+                <div class="carousel-item" onclick="openLightbox('assets/img/hotel principal.png','Hotel Golden Waves')">
+                    <img src="assets/img/hotel principal.png" alt="Hotel Golden Waves">
+                    <div class="carousel-caption">Hotel Golden Waves</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cta container" data-aos="fade-up">
+            <a href="services.html" class="btn btn-outline">Ver Todos los Espacios</a>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="gallery-lightbox" class="gallery-lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
     <!-- ========== STATS SECTION ========== -->
+
     <section class="stats section-dark">
         <div class="container">
             <div class="stats-grid">
@@ -369,16 +459,13 @@
                     </div>
                 </div>
                 
-                <div class="location-map" data-aos="fade-left">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62524.34836!2d-75.5!3d10.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI3JzAwLjAiTiA3NcKwMzAnMDAuMCJX!5e0!3m2!1ses!2sco!4v1234567890"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="location-map" data-aos="fade-left" style="background:#0F2438; display:flex; align-items:center; justify-content:center; height:450px; border-radius:10px; border:1px solid rgba(212, 175, 55, 0.2);">
+                    <div style="text-align:center; padding:2rem;">
+                        <i class="fas fa-map-marked-alt" style="font-size:4rem; color:#d4af37; margin-bottom:1rem;"></i>
+                        <h3 style="color:#fff; font-family:'Cormorant Garamond', serif; font-size:1.8rem; margin-bottom:0.5rem;">Encuéntranos en La Boquilla</h3>
+                        <p style="color:#b8c5d6;">Ubicación privilegiada entre el mar Caribe y el manglar.</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top:1.5rem; display:inline-block;">Abrir en Google Maps</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -390,11 +477,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="20" stroke="#d4af37" stroke-width="1.5" fill="none"/>
-                            <path d="M25,15 Q27,18 27,23 Q27,28 25,30 Q23,32 22,35" 
-                                  stroke="#d4af37" stroke-width="1.5" fill="none"/>
-                        </svg>
+                        <img src="assets/img/Logosinfondo.png" alt="Golden Waves Logo" class="footer-logo-img">
                         <span>GOLDEN WAVES</span>
                     </div>
                     <p class="footer-description">
@@ -462,5 +545,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
+
+    <!-- Gallery Lightbox Script -->
+    <script>
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('gallery-lightbox');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox(e) {
+            if (!e || e.target === document.getElementById('gallery-lightbox') || e.target.closest('.lightbox-close')) {
+                document.getElementById('gallery-lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
